@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+            body
+{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+}
+.container
+{
+    display: flex;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 6px 4px;
+}
+.head
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:220px ;
+}
+.book
+{
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+.container h1
+{
+    color: white;
+    font-size: 2rem;  /* 24px */
+    line-height: 2rem; /* 32px */
+}
+
+.wrapper
+{
+    max-width: 900px;
+     margin: 0 auto;        /* centers the wrapper horizontally */
+    padding: 0 40px;       /* large left/right padding for extra space */
+    box-sizing: border-box;
+}
+.bodynew h2
+{
+    color: rgb(31 41 55);
+    font-size: 1.875rem;  
+    line-height: 2.25rem;
+    font-weight: 700;  
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.bodynew p
+{
+    color: rgb(75 85 99);
+    max-width: 42rem;
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid1
+{
+    display: flex;
+    gap: 24px;
+    margin-top: 30px;
+    margin-bottom: 0 auto 48px;
+    justify-content: center;
+}
+.totalcard
+{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 24px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+.totalcard p
+{
+    margin: 5px 0 0;
+    color: gray;
+}
+.totalcard h3
+{
+    font-size: 28px;
+    margin: 5px 0 0;
+    font-weight: bold;
+}
+
+.totalcard:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.hh1
+{
+    color: #1d4ed8;
+}
+.hh2
+{
+    color:rgb(180, 5, 180);
+}
+.hh3
+{
+    color: green;
+}
+.hh4
+{
+    color: orange;
+}
+.icon-wrapper1
+{
+     background: #dbeafe; /* light blue background */
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-wrapper2
+{
+    background: #f3e8ff; /* light blue background */
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-wrapper3
+{
+     background: #d1fae5; /* light blue background */
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-wrapper4
+{
+     background: #fef9c3; /* light blue background */
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid2
+{
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 32px;
+    margin: 30px auto 48px auto;
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+.left-card,
+.right-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 24px;
+    width: 100%; /* fill the grid column */
+    box-sizing: border-box;
+    margin-bottom: 32px;
+}
+.btn1
+{
+    align-items: center;
+    display: flex;
+    background-color: #eff6ff;
+    border-radius: 4px;
+    padding: 1px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* start with no glow */
+    transition: all 0.3s ease;
+}
+.btn1 p
+{
+    padding: 2px;
+    color: #1d4ed8;
+}
+.btn2
+{
+    align-items: center;
+    display: flex;
+    background-color: #f5f3ff;
+    border-radius: 4px;
+    padding: 1px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* start with no glow */
+    transition: all 0.3s ease;
+}
+.btn2 p
+{
+    padding: 2px;
+    color: #6d28d9;
+}
+.btn3
+{
+    align-items: center;
+    display: flex;
+    background-color: #ecfdf5;
+    border-radius: 4px;
+    padding: 1px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* start with no glow */
+    transition: all 0.3s ease;
+}
+.btn3 p
+{
+    padding: 2px;
+    color: #047857;
+}
+
+.btn1 .bb
+{
+    padding-left: 10px;
+    width: 1.25rem;   /* same as w-5 */
+    height: 1.25rem;  /* same as h-5 */
+    margin-right: 0.75rem;
+    color: #1d4ed8;
+}
+
+.btn2 .bb
+{
+    padding-left: 10px;
+    width: 1.25rem;   /* same as w-5 */
+    height: 1.25rem;  /* same as h-5 */
+    margin-right: 0.75rem;
+    color: #6d28d9;
+}
+
+.btn3 .bb
+{
+    padding-left: 10px;
+    width: 1.25rem;   /* same as w-5 */
+    height: 1.25rem;  /* same as h-5 */
+    margin-right: 0.75rem;
+    color: #047857;
+}
+
+.btn22
+{
+    align-items: center;
+    display: flex;
+    background-color: #fdf2f8;
+    border-radius: 4px;
+    padding: 1px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* start with no glow */
+    transition: all 0.3s ease;
+}
+.btn22 p
+{
+    padding: 2px;
+    color: #be185d;
+}
+
+.btn22 .bb
+{
+    padding-left: 10px;
+    width: 1.25rem;   /* same as w-5 */
+    height: 1.25rem;  /* same as h-5 */
+    margin-right: 0.75rem;
+    color: #be185d;
+}
+
+.btn1:hover
+{
+    background: #dbeafe;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.5); /* soft indigo glow */
+}
+
+.btn2:hover
+{
+    background: #ede9fe;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.5); /* soft indigo glow */
+}
+
+.btn3:hover
+{
+    background: #d1fae5;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.5); /* soft indigo glow */
+}
+.btn22:hover
+{
+    background: #fce7f3;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.5); /* soft indigo glow */
+}
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="head">
+                <i data-feather="book" class="book"></i>
+                <h1>Court Record Managment</h1>
+            </div>
+        </div>
+        <div class="wrapper">
+                <div class="bodynew">
+                <h2>Dashboard Overview</h2>
+                <p>Manage all court records, users, lawyers, and case assignments efficiently</p>
+            </div>
+
+            <div class="grid1">
+                <div class="bg">
+                    <div class="totalcard">
+                        <div>
+                            <p>Total Users</p>
+                            <h3 class="hh1">120</h3>
+                        </div>
+                        <div class="icon-wrapper1">
+                            <i data-feather="users"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg">
+                    <div class="totalcard">
+                        <div>
+                            <p>Total Lawyers</p>
+                            <h3 class="hh2">20</h3>
+                        </div>
+                        <div class="icon-wrapper2">
+                            <i data-feather="briefcase"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg">
+                    <div class="totalcard">
+                        <div>
+                            <p>Active Cases</p>
+                            <h3 class="hh3">48</h3>
+                        </div>
+                        <div class="icon-wrapper3">
+                            <i data-feather="activity"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg">
+                    <div class="totalcard">
+                        <div>
+                            <p>Upcoming Cases</p>
+                            <h3 class="hh4">10</h3>
+                        </div>
+                        <div class="icon-wrapper4">
+                            <i data-feather="calendar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid2">                
+               <div class="left-card">
+                    <div>
+                        <h3>Quick Actions</h3>
+                    </div>
+                    <div class="menu">
+                        <div class="btn1">
+                            <i data-feather="user-plus" class="bb"></i>
+                            <p>Insert New User</p>
+                        </div>
+                        <div class="btn2">
+                            <i data-feather="briefcase" class="bb"></i>
+                            <p>Insert New Lawyer</p>
+                        </div>
+                        <div class="btn3">
+                            <i data-feather="link" class="bb"></i>
+                            <p>Assign Case</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-card">
+                    <div>
+                        <h3>View Records</h3>
+                    </div>
+                    <div class="menu">
+                        <div class="btn1">
+                            <i data-feather="menu" class="bb"></i>
+                            <p>View All Users</p>
+                        </div>
+                        <div class="btn22">
+                            <i data-feather="file-text" class="bb"></i>
+                            <p>View All Lawyers</p>
+                        </div>
+                        <div class="btn3">
+                            <i data-feather="database" class="bb"></i>
+                            <p>View Case Records</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        feather.replace();
+    </script>
+    </body>
+</html>
